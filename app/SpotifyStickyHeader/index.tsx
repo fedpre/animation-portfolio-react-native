@@ -6,10 +6,10 @@ import { StatusBar } from 'expo-status-bar';
 
 const SpotifyStickyHeader = () => {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
+    <>
       <AlbumView />
       <StatusBar style="light" />
-    </SafeAreaView>
+    </>
   );
 };
 
