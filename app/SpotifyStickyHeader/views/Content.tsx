@@ -3,12 +3,15 @@ import React, { FC } from 'react';
 import { MAX_HEADER_HEIGHT } from '../model/ConstantValues';
 import { ScrollView } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Track } from '../model/Album';
+import TrackView from './TrackView';
 
 type Props = {
   artist: string;
+  tracks: Track[];
 };
 
-const Content: FC<Props> = ({ artist }) => {
+const Content: FC<Props> = ({ artist, tracks }) => {
   const height = MAX_HEADER_HEIGHT;
   return (
     <ScrollView
@@ -28,6 +31,11 @@ const Content: FC<Props> = ({ artist }) => {
         <View style={styles.artistContainer}>
           <Text style={styles.artist}>{artist}</Text>
         </View>
+      </View>
+      <View style={styles.tracks}>
+        {tracks.map((track, key) => (
+          <TrackView index={key + 1} {...{ track, key, artist }} />
+        ))}
       </View>
     </ScrollView>
   );

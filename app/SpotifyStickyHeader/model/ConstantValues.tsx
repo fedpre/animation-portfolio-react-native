@@ -1,6 +1,9 @@
 import { Dimensions } from 'react-native';
 import Constants from 'expo-constants';
 
+export const BUTTON_HEIGHT = 48;
+export const BUTTON_WIDTH = 200;
+
 const { height } = Dimensions.get('window');
 const φ = (1 + Math.sqrt(5)) / 2;
 
