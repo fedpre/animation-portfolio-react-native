@@ -10,6 +10,7 @@ import Animated, {
   Extrapolate,
   SharedValue,
   interpolate,
+  interpolateColor,
   useAnimatedStyle,
 } from 'react-native-reanimated';
 import { Feather as Icon } from '@expo/vector-icons';
@@ -21,11 +22,10 @@ type Props = {
 
 const HeaderView: FC<Props> = ({ artist, y }) => {
   const rHeaderStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(
+    backgroundColor: interpolateColor(
       y.value,
       [HEADER_DELTA - 16, HEADER_DELTA],
-      [0, 1],
-      Extrapolate.CLAMP
+      ['transparent', '#000']
     ),
   }));
   const rHeaderTitleStyle = useAnimatedStyle(() => ({
@@ -57,8 +57,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: MIN_HEADER_HEIGHT,
-    backgroundColor: 'black',
-    paddingTop: Constants.statusBarHeight,
+    paddingTop: Constants.statusBarHeight + 8,
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 16,

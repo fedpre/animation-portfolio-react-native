@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     color: '#b2b3b4',
   },
   artist: {
+    paddingTop: 4,
     color: '#b2b3b4',
   },
   name: {
