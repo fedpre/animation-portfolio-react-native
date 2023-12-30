@@ -43,7 +43,7 @@ const HeaderView: FC<Props> = ({ artist, y }) => {
       <Animated.Text style={[styles.title, rHeaderTitleStyle]}>
         {artist}
       </Animated.Text>
-      <Icon name="more-horizontal" color="#white" size={24} />
+      <Icon name="more-horizontal" color="white" size={24} />
     </Animated.View>
   );
 };

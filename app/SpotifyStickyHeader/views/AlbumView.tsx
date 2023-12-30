@@ -12,7 +12,6 @@ import {
   BUTTON_HEIGHT,
   HEADER_DELTA,
   MAX_HEADER_HEIGHT,
-  MIN_HEADER_HEIGHT,
 } from '../model/ConstantValues';
 import ShufflePlay from './ShufflePlay';
 
@@ -23,7 +22,7 @@ const AlbumView = () => {
   const rButtonStyle = useAnimatedStyle(() => ({
     transform: [
       {
-        translateY: -y.value,
+        translateY: Math.max(-y.value, -HEADER_DELTA + BUTTON_HEIGHT / 2),
       },
     ],
   }));
