@@ -10,7 +10,7 @@ const ShufflePlay: FC<Props> = () => {
     <TouchableWithoutFeedback>
       <View style={styles.button}>
         <LinearGradient
-          style={{ ...StyleSheet.absoluteFill, borderRadius: 32 }}
+          style={{ ...StyleSheet.absoluteFillObject, borderRadius: 32 }}
           colors={['rgba(255, 255, 255, 0.5)', '#57B560']}
         />
         <Text style={styles.label}>SHUFFLE PLAY</Text>
