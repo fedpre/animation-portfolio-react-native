@@ -4,4 +4,4 @@ This project explores the famous spotify header animation. The purpose is to exp
 
 See below for a demo of the project.
 
-![Demo]()
+![Demo](./images/spotify_animation.gif)
