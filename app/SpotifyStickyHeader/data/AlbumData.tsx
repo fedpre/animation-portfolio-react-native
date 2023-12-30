@@ -4,6 +4,7 @@ export const AlbumData: Album = {
   name: 'Remote Control',
   artist: 'Jan Blomqvist',
   release: 2016,
+  monthlyListeners: '509,082',
   cover: require('../assets/Jan-Blomqvist.jpg'),
   tracks: [
     { name: 'Stories Over' },
