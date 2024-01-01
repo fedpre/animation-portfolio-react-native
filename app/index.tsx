@@ -15,6 +15,7 @@ export default function Home() {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.listContainer}
           renderItem={({ item }) => <ProjectsCard project={item} />}
+          ItemSeparatorComponent={() => <View style={{ marginVertical: 12 }} />}
         />
       </View>
       <StatusBar style="light" />
