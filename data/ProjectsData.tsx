@@ -13,4 +13,10 @@ export const projectsData: Project[] = [
     date: '2024-01-01',
     detailView: ProjectScreens.LayoutAnimation,
   },
+  {
+    id: 3,
+    title: 'Shared Element Transition',
+    date: '2024-01-02',
+    detailView: ProjectScreens.SharedElementTransition,
+  },
 ];

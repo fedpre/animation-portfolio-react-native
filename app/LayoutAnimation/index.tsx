@@ -7,8 +7,15 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import LayoutAnimationListItem from './components/LayoutAnimationListItem';
+import Animated, {
+  Easing,
+  FadeInLeft,
+  FadeOutRight,
+  Layout,
+} from 'react-native-reanimated';
 
 const BACKGROUND = '#2B2D42';
+const LIST_ITEM_COLOR = '#D72483';
 
 interface Item {
   id: number;
@@ -42,7 +49,7 @@ const LayoutAnimation = () => {
   return (
     <SafeAreaView edges={['top']} style={styles.container}>
       <StatusBar style="light" />
-      <ScrollView
+      {/* <ScrollView
         style={styles.scrollview}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
@@ -59,7 +66,39 @@ const LayoutAnimation = () => {
             initialState={initialState}
           />
         ))}
-      </ScrollView>
+      </ScrollView> */}
+      <Animated.FlatList
+        data={items}
+        itemLayoutAnimation={Layout.easing(Easing.inOut(Easing.ease))}
+        renderItem={({ item, index }) => (
+          <Animated.View
+            key={item.id}
+            entering={
+              initialState.current ? FadeInLeft.delay(index * 100) : FadeInLeft
+            }
+            exiting={FadeOutRight}
+            style={{
+              height: 100,
+              width: '90%',
+              backgroundColor: LIST_ITEM_COLOR,
+              marginVertical: 10,
+              borderRadius: 20,
+              // Shadow on Android
+              elevation: 5,
+              // Shadow on iOS
+              shadowColor: 'black',
+              shadowOpacity: 0.2,
+              shadowOffset: { width: 0, height: 10 },
+              shadowRadius: 20,
+              alignSelf: 'center',
+            }}
+            onTouchEnd={() => onDelete(item.id)}
+          />
+        )}
+        contentContainerStyle={{
+          paddingBottom: 4 * bottom,
+        }}
+      />
       <Pressable
         style={(state) => {
           if (state.pressed) {
