@@ -19,4 +19,10 @@ export const projectsData: Project[] = [
     date: '2024-01-02',
     detailView: ProjectScreens.SharedElementTransition,
   },
+  {
+    id: 4,
+    title: 'Onboarding Carousel',
+    date: '2024-01-19',
+    detailView: ProjectScreens.OnboardingCarousel,
+  },
 ];

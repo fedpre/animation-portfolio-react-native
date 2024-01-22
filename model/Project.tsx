@@ -2,6 +2,7 @@ export enum ProjectScreens {
   SpotifyStickyHeader = 'SpotifyStickyHeader',
   LayoutAnimation = 'LayoutAnimation',
   SharedElementTransition = 'SharedElementTransition',
+  OnboardingCarousel = 'OnboardingCarousel',
 }
 
 export type Project = {
