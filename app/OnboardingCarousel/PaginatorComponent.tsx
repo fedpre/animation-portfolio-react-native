@@ -32,9 +32,9 @@ const PaginatorComponent: FC<Props> = ({ circleIndex, translateX }) => {
       key={circleIndex}
       style={[
         {
-          height: 6,
-          borderRadius: 50,
-          margin: 4,
+          height: 5,
+          borderRadius: 25,
+          margin: 2,
         },
         rStyle,
       ]}

@@ -27,7 +27,7 @@ const OnboardingScreen: React.FC<Props> = ({
       screenIndex * pageWidth,
       (screenIndex + 1) * pageWidth,
     ];
-    const outPutRange = [0.5, 1, 0.5];
+    const outPutRange = [0, 1, 0];
     const opacity = interpolate(
       translateX.value,
       inputRange,

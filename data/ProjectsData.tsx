@@ -25,4 +25,10 @@ export const projectsData: Project[] = [
     date: '2024-01-19',
     detailView: ProjectScreens.OnboardingCarousel,
   },
+  {
+    id: 5,
+    title: 'Text Blur',
+    date: '2024-01-30',
+    detailView: ProjectScreens.TextBlur,
+  },
 ];

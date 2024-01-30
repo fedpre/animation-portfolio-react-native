@@ -3,6 +3,7 @@ export enum ProjectScreens {
   LayoutAnimation = 'LayoutAnimation',
   SharedElementTransition = 'SharedElementTransition',
   OnboardingCarousel = 'OnboardingCarousel',
+  TextBlur = 'TextBlur',
 }
 
 export type Project = {
