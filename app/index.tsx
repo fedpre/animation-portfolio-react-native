@@ -4,17 +4,20 @@ import { projectsData } from '../data/ProjectsData';
 import ProjectsCard from '../components/ProjectsCard';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Animated, { SlideInLeft } from 'react-native-reanimated';
 
 export default function Home() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#111' }}>
       <View style={styles.container}>
         <Text style={styles.title}>Animation Projects</Text>
-        <FlatList
+        <Animated.FlatList
           data={projectsData}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.listContainer}
-          renderItem={({ item }) => <ProjectsCard project={item} />}
+          renderItem={({ item, index }) => (
+            <ProjectsCard index={index} project={item} />
+          )}
           ItemSeparatorComponent={() => <View style={{ marginVertical: 12 }} />}
         />
       </View>
