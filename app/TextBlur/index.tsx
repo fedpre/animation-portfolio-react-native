@@ -69,7 +69,7 @@ const Letter = ({
 
 const TextBlur = () => {
   const message = 'FOCUS'.split('');
-  const font = useFont(require('./fonts/Roboto-Bold.ttf'), FONT_SIZE);
+  const font = useFont(require('../fonts/Roboto-Bold.ttf'), FONT_SIZE);
   const spacingOffset = height / 5 - 10;
 
   const fingerPosition = useSharedValue({ x: 0, y: 0 });

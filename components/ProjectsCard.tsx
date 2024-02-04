@@ -1,5 +1,11 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
-import React, { FC, useCallback } from 'react';
+import {
+  Pressable,
+  StyleSheet,
+  View,
+  useWindowDimensions,
+  Text,
+} from 'react-native';
+import React, { FC, useCallback, useMemo } from 'react';
 import { Project } from '../model/Project';
 import { Link } from 'expo-router';
 import Ionicons from '@expo/vector-icons/build/Ionicons';
@@ -22,7 +28,7 @@ const ProjectsCard: FC<Props> = ({ project, index }) => {
               <Text style={styles.title}>{title}</Text>
               <Text style={styles.date}>{date}</Text>
             </View>
-            <Ionicons name="chevron-forward" size={24} color="white" />
+            <Ionicons name="chevron-forward" size={24} color="#222" />
           </View>
         </Pressable>
       </Link>
@@ -34,6 +40,7 @@ export default ProjectsCard;
 
 const styles = StyleSheet.create({
   card: {
+    backgroundColor: '#FFFFFF',
     borderRadius: 8,
     paddingHorizontal: 16,
     paddingVertical: 8,
@@ -45,7 +52,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   title: {
-    color: 'white',
+    color: '#222',
     fontSize: 18,
     fontWeight: 'bold',
   },
